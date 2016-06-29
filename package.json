@@ -2,7 +2,7 @@
     "ApexClass":[
         {
             "name"          : "Adair - Trigger Handler",
-            "file_name"     : "AdairHandler.cls",
+            "file_name"     : "Adair_TriggerHandler.cls",
             "description"   : "Adair Trigger Handler Class",
             "author"        : "Joshua Van Kley",
             "params"        : [
@@ -501,8 +501,8 @@
     ],
     "ApexTrigger":[
         {
-            "name"          : "Adair - Trigger",
-            "file_name"     : "AdairTrigger.trigger",
+            "name"          : "Adair - Trigger Default",
+            "file_name"     : "Adair_TriggerDefault.trigger",
             "description"   : "Basic Adair Trigger for use with Trigger Handler",
             "author"        : "Joshua Van Kley",
             "params"        : [
