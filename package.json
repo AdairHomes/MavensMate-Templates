@@ -7,17 +7,17 @@
             "author"        : "Joshua Van Kley",
             "params"        : [
                 {
-                    "name"          : "SObjectCamelCaseLabel",
+                    "name"          : "api_name",
                     "description"   : "The SObject Name in Camel Case",
-                    "default"       : "SObject_Camel_Case_Label"
+                    "default"       : "SObjectCamelCaseLabel"
                 },
                 {
-                    "name"          : "SObjectName",
+                    "name"          : "sobject_system_name",
                     "description"   : "The proper SObject Name",
                     "default"       : "SObject__c"
                 },
                 {
-                    "name"          : "WithSharing",
+                    "name"          : "with_or_without_sharing",
                     "description"   : "With Sharing or Without Sharing",
                     "default"       : "Without Sharing"
                 }
@@ -502,12 +502,12 @@
             "author"        : "Joshua Van Kley",
             "params"        : [
                 {
-                    "name"          : "SObjectCamelCaseLabel",
+                    "name"          : "api_name",
                     "description"   : "The SObject Name in Camel Case",
-                    "default"       : "SObject_Camel_Case_Label"
+                    "default"       : "SObjectCamelCaseLabel"
                 },
                 {
-                    "name"          : "SObjectName",
+                    "name"          : "sobject_system_name",
                     "description"   : "The proper SObject Name",
                     "default"       : "SObject__c"
                 }
