@@ -1,4 +1,4 @@
-trigger {{ SObjectCamelCaseLabel }} on {{ SObjectName }} (after delete, after insert, after undelete, after update, before delete, before insert, before update)
+trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert, after undelete, after update, before delete, before insert, before update)
 {
     /**
      *  The methods contained within this trigger are meant only as a quick-use
@@ -8,8 +8,8 @@ trigger {{ SObjectCamelCaseLabel }} on {{ SObjectName }} (after delete, after in
      *  Trigger data is available to send to the Handler.
      */
 
-    // Instantiate {{ SObjectCamelCaseLabel }}Handler for {{ SObjectName }}
-    {{ SObjectCamelCaseLabel }}Handler triggerHandler = new {{ SObjectCamelCaseLabel }}Handler();
+    // Instantiate {{ api_name }}Handler for {{ sobject_system_name }}
+    {{ api_name }}Handler triggerHandler = new {{ api_name }}Handler();
 
     // Before (Insert, Update, Delete)
     if (Trigger.isBefore) {
@@ -41,19 +41,19 @@ trigger {{ SObjectCamelCaseLabel }} on {{ SObjectName }} (after delete, after in
         if (Trigger.isInsert) {
             triggerHandler.onAfterInsert(Trigger.new);
             // Any Asynchronous calls
-            {{ SObjectCamelCaseLabel }}Handler.onAfterInsertAsync(Trigger.newMap.keySet());
+            {{ api_name }}Handler.onAfterInsertAsync(Trigger.newMap.keySet());
         }
         // After Update
         if (Trigger.isUpdate) {
             triggerHandler.onAfterUpdate(Trigger.old, Trigger.new, Trigger.newMap);
             // Any Asynchronous calls
-            {{ SObjectCamelCaseLabel }}Handler.onAfterUpdateAsync(Trigger.newMap.keySet());
+            {{ api_name }}Handler.onAfterUpdateAsync(Trigger.newMap.keySet());
         }
         // After Delete
         if (Trigger.isDelete) {
             triggerHandler.onAfterDelete(Trigger.old, Trigger.oldMap);
             // Any Asynchronous calls
-            {{ SObjectCamelCaseLabel }}Handler.onAfterDeleteAsync(Trigger.oldMap.keySet());
+            {{ api_name }}Handler.onAfterDeleteAsync(Trigger.oldMap.keySet());
         }
         // After UnDelete
         if (Trigger.isUnDelete) {
