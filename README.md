@@ -3,35 +3,38 @@ MavensMate-Templates
 
 A repository of metadata templates for use in MavensMate projects.
 
-###Documentation
+### Documentation
 http://mavensmate.com/Plugins/Sublime_Text/Metadata_Templates
 
-###How To Contribute
+### How To Implement
 
-####1. Write Your Template
+The only step required to use these templates is to modify MavensMate User Settings to pull from the Adair Homes GitHub Repository.
+```JSON
 
-#####Merge Fields
-MavensMate now supports more sophisticated templates. Simply include a `params` object as part of your template definition in `package.json`. Here's an example:
-
-######From package.json
 ```
+
+### How To Make A New Template
+
+
+###### Modify package.json to include new class/trigger/component/page
+```JSON
 {
 	"name" 			: "Apex Trigger",
 	"file_name"		: "ApexTrigger.trigger",
 	"description" 	: "Basic Apex Trigger template",
 	"author" 		: "MavensMate",
-	"params" 		: [ 
-        {   
+	"params" 		: [
+        {
             "name"          : "api_name",
             "description"   : "Apex Trigger API Name",
             "default" 		: "MyCoolTrigger"
         },
-        {   
+        {
             "name"          : "object_name",
             "description"   : "Object API Name",
             "default" 		: "Account"
         },
-        {   
+        {
             "name"          : "foo",
             "description"   : "A random variable name",
             "default" 		: "myCoolString"
@@ -40,14 +43,9 @@ MavensMate now supports more sophisticated templates. Simply include a `params` 
 }
 ```
 
-######From ApexTrigger.trigger
-```
+###### Create class/trigger/component/page using templating parameters set in package.json
+```JAVA
 trigger {{ api_name }} on {{ object_name }} (before insert) {
 	String {{ foo }} = 'bar';
 }
 ```
-
-We request that you use the param name `api_name` for the API Name of the Apex/Visualforce metadata.
-
-####2. Submit Pull Request
-Submit a pull request to this repository with your template and update `package.json` to include your new repository metadata. We'll review the submission and include it in the master repository if it serves a legitimate purpose in MavensMate and passes all tests.
