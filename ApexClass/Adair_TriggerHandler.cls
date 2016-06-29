@@ -21,12 +21,12 @@ public {{ with_or_without_sharing }} class {{ api_name }}
 
     }
 
-    public void onBeforeUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_camel_case_label }}Map)
+    public void onBeforeUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map)
     {
 
     }
 
-    public void onBeforeDelete (List<{{ sobject_system_name }}> {{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> {{ sobject_camel_case_label }}Map)
+    public void onBeforeDelete (List<{{ sobject_system_name }}> {{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
     {
 
     }
@@ -37,12 +37,12 @@ public {{ with_or_without_sharing }} class {{ api_name }}
 
     }
 
-    public void onAfterUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_camel_case_label }}Map)
+    public void onAfterUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map)
     {
 
     }
 
-    public void onAfterDelete (List<{{ sobject_system_name }}> deleted{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_camel_case_label }}Map)
+    public void onAfterDelete (List<{{ sobject_system_name }}> deleted{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
     {
 
     }
