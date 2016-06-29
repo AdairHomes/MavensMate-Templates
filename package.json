@@ -8,6 +8,11 @@
             "params"        : [
                 {
                     "name"          : "api_name",
+                    "description"   : "The SObject Name in Camel Case with Handler suffix",
+                    "default"       : "SObjectCamelCaseLabelHandler"
+                },
+                {
+                    "name"          : "sobject_camel_case_label",
                     "description"   : "The SObject Name in Camel Case",
                     "default"       : "SObjectCamelCaseLabel"
                 },

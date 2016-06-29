@@ -27,10 +27,6 @@ trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert,
         if (Trigger.isDelete) {
             triggerHandler.onBeforeDelete(Trigger.old, Trigger.oldMap);
         }
-        // Before Insert or Update
-        if (Trigger.isInsert || Trigger.isUpdate) {
-            // ...
-        }
     }
 
     // After (Insert, Update, Delete, Undelete)
@@ -58,10 +54,6 @@ trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert,
         // After UnDelete
         if (Trigger.isUnDelete) {
             triggerHandler.onUnDelete(Trigger.new);
-        }
-        // After Insert or Update
-        if (Trigger.isInsert || Trigger.isUpdate) {
-            // ...
         }
     }
 

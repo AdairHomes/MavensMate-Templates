@@ -1,4 +1,4 @@
-public {{ with_or_without_sharing }} class {{ api_name }}Handler
+public {{ with_or_without_sharing }} class {{ api_name }}
 {
     /**
      *  The methods contained within this class are meant only as a quick-use
@@ -13,41 +13,41 @@ public {{ with_or_without_sharing }} class {{ api_name }}Handler
      */
 
     // Initialize
-    public {{ api_name }}Handler () { }
+    public {{ api_name }} () { }
 
     // Before Methods
-    public void onBeforeInsert (List<{{ sobject_system_name }}> new{{ api_name }}s)
+    public void onBeforeInsert (List<{{ sobject_system_name }}> new{{ sobject_camel_case_label }}s)
     {
 
     }
 
-    public void onBeforeUpdate (List<{{ sobject_system_name }}> old{{ api_name }}s, List<{{ sobject_system_name }}> updated{{ api_name }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
+    public void onBeforeUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
     {
 
     }
 
-    public void onBeforeDelete (List<{{ sobject_system_name }}> {{ api_name }}sToDelete, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
+    public void onBeforeDelete (List<{{ sobject_system_name }}> {{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
     {
 
     }
 
     // After Methods
-    public void onAfterInsert (List<{{ sobject_system_name }}> new{{ api_name }}s)
+    public void onAfterInsert (List<{{ sobject_system_name }}> new{{ sobject_camel_case_label }}s)
     {
 
     }
 
-    public void onAfterUpdate (List<{{ sobject_system_name }}> old{{ api_name }}s, List<{{ sobject_system_name }}> updated{{ api_name }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
+    public void onAfterUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
     {
 
     }
 
-    public void onAfterDelete (List<{{ sobject_system_name }}> deleted{{ api_name }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
+    public void onAfterDelete (List<{{ sobject_system_name }}> deleted{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> {{ sobject_system_name }}Map)
     {
 
     }
 
-    public void onUndelete (List<{{ sobject_system_name }}> restored{{ api_name }}s)
+    public void onUndelete (List<{{ sobject_system_name }}> restored{{ sobject_camel_case_label }}s)
     {
 
     }
