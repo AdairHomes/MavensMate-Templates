@@ -10,7 +10,12 @@ http://mavensmate.com/Plugins/Sublime_Text/Metadata_Templates
 
 The only step required to use these templates is to modify MavensMate User Settings to pull from the Adair Homes GitHub Repository.
 ```JSON
-
+{
+    ...
+    "mm_template_location": "remote",
+    "mm_template_source": "AdairHomes/MavensMate-Templates/master",
+    ...
+}
 ```
 
 ### How To Make A New Template
