@@ -6,8 +6,11 @@ A repository of metadata templates for use in MavensMate projects.
 ### Documentation
 http://mavensmate.com/Plugins/Sublime_Text/Metadata_Templates
 
-### How To Implement
+### Notes
+- Occassionally MavensMate will require a complete uninstall/resinstall cycle in order to pull the correct templates
+- The templates will attempt to deploy to the server immediately after creation
 
+### How To Implement
 The only step required to use these templates is to modify MavensMate User Settings to pull from the Adair Homes GitHub Repository.
 ```JSON
 {
@@ -19,8 +22,6 @@ The only step required to use these templates is to modify MavensMate User Setti
 ```
 
 ### How To Make A New Template
-
-
 ###### Modify package.json to include new class/trigger/component/page
 ```JSON
 {
