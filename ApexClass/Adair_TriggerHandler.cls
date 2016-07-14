@@ -71,9 +71,13 @@ public {{ with_or_without_sharing }} class {{ api_name }}
      *  Private Methods
      */
 
+    /* Example
+
     private Boolean archiveOldHomeSites (Integer numberOfMonths)
     {
         // Archive old Home sites older than `numberOfMonths`
     }
+
+    */
 
 }
