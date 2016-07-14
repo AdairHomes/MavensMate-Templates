@@ -1,11 +1,7 @@
 trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert, after undelete, after update, before delete, before insert, before update)
 {
     /**
-     *  The methods contained within this trigger are meant only as a quick-use
-     *  reference. Rather than actually calling a method named "onBeforeInsert",
-     *  a method with an appropriately descriptive name should be created in the
-     *  Trigger Handler Class.  Use the methods contained only to reference which
-     *  Trigger data is available to send to the Handler.
+     *  Use the methods below to send Trigger data to the Trigger Handler Class.
      */
 
     // Instantiate {{ api_name }}Handler for {{ sobject_system_name }}
