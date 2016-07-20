@@ -21,7 +21,7 @@ public {{ with_or_without_sharing }} class {{ api_name }}
 
     }
     // Before Delete
-    public Void onBeforeDelete (List<{{ sobject_system_name }}> {{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
+    public Void onBeforeDelete (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
     {
 
     }
