@@ -1,6 +1,9 @@
 public {{ with_or_without_sharing }} class {{ api_name }}
 {
-    // Initialize
+
+    /**
+     *  Initialize / Constructor Method
+     */
     public {{ api_name }} ()
     {}
 
@@ -55,11 +58,13 @@ public {{ with_or_without_sharing }} class {{ api_name }}
     {}
 
     /**
-     *  Private Methods - This section contains all private methods which should
-     *  be used by the trigger methods above.  Trigger code should be contained
-     *  within these classes rather than directly within the methods above.
+     *  Private Methods - This section contains all private methods which should be used by the trigger methods above.
+     *  Trigger code should be contained within these classes rather than directly within the methods above.
      */
 
-    /* ...  */
+    private Boolean exampleHelperMethod ()
+    {
+        return true;
+    }
 
 }

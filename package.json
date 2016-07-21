@@ -29,6 +29,19 @@
            ]
         },
         {
+            "name"          : "Adair - Test Class",
+            "file_name"     : "Adair_TestClass.cls",
+            "description"   : "Adair Test Class",
+            "author"        : "Joshua Van Kley",
+            "params"        : [
+                {
+                    "name"          : "api_name",
+                    "description"   : "The Related Class or SObject Name in Camel Case with `_Test` suffix",
+                    "default"       : "Opportunity_Test"
+                }
+           ]
+        },
+        {
             "name":"Default",
             "file_name":"ApexClass.cls",
             "description":"The default template for an Apex Class",

@@ -1,8 +1,14 @@
 trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert, after undelete, after update, before delete, before insert, before update)
 {
-    // Instantiate {{ api_name }}Handler for {{ sobject_system_name }}
+
+    /**
+     *  Instantiate {{ api_name }}Handler for {{ sobject_system_name }}
+     */
     {{ api_name }}Handler triggerHandler = new {{ api_name }}Handler();
-    // Before (Insert, Update, Delete)
+
+    /**
+     *  Before (Insert, Update, Delete)
+     */
     if (Trigger.isBefore) {
         // Before Insert
         if (Trigger.isInsert) {
@@ -17,7 +23,10 @@ trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert,
             triggerHandler.onBeforeDelete(Trigger.old, Trigger.oldMap);
         }
     }
-    // After (Insert, Update, Delete, Undelete)
+
+    /**
+     *  After (Insert, Update, Delete, Undelete)
+     */
     if (Trigger.isAfter) {
         // After Insert
         if (Trigger.isInsert) {
@@ -42,4 +51,5 @@ trigger {{ api_name }} on {{ sobject_system_name }} (after delete, after insert,
             triggerHandler.onUnDelete(Trigger.new);
         }
     }
+
 }
