@@ -1,6 +1,24 @@
 {
     "ApexClass":[
         {
+            "name"          : "Adair - Static Utility",
+            "file_name"     : "Adair_StaticUtility.cls",
+            "description"   : "Adair Static Utility Class",
+            "author"        : "Joshua Van Kley",
+            "params"        : [
+                {
+                    "name"          : "api_name",
+                    "description"   : "A descriptive (yet short) class name prefixed with 'Util_'",
+                    "default"       : "Util_Random"
+                },
+                {
+                    "name"          : "with_or_without_sharing",
+                    "description"   : "With Sharing or Without Sharing",
+                    "default"       : "without sharing"
+                }
+           ]
+        },
+        {
             "name"          : "Adair - Trigger Handler",
             "file_name"     : "Adair_TriggerHandler.cls",
             "description"   : "Adair Trigger Handler Class",
@@ -24,7 +42,7 @@
                 {
                     "name"          : "with_or_without_sharing",
                     "description"   : "With Sharing or Without Sharing",
-                    "default"       : "Without Sharing"
+                    "default"       : "without sharing"
                 }
            ]
         },
