@@ -14,17 +14,17 @@ public {{ with_or_without_sharing }} class {{ api_name }}
      */
 
     /**
-     * getDecimal methods can be called with or without precision/scale, or randomNegative specification.
+     * getDecimal methods can be called with or without precision/scale, or negative specification.
      *
      * @return  Decimal  A random Decimal Value
      */
     public static Decimal getDecimal () {
         return getDecimal(9, 2, true); }
-    public static Decimal getDecimal (Boolean randomNegative) {
-        return getDecimal(9, 2, randomNegative); }
+    public static Decimal getDecimal (Boolean negative) {
+        return getDecimal(9, 2, negative); }
     public static Decimal getDecimal (Integer precision, Integer scale) {
         return getDecimal(precision, scale, true); }
-    public static Decimal getDecimal (Integer precision, Integer scale, Boolean randomNegative)
+    public static Decimal getDecimal (Integer precision, Integer scale, Boolean negative)
     {
         // Number of digits before the decimal
         Integer intDigits = precision - scale;
@@ -32,7 +32,7 @@ public {{ with_or_without_sharing }} class {{ api_name }}
         Decimal value = Math.random() * Math.pow(10, intDigits);
         value = value.setScale(scale);
         // If specified, randomly assign as negative value
-        return (randomNegative) ? setNegativeRandomly(value) : value;
+        return negative ? (value * -1) : value;
     }
 
     /**
