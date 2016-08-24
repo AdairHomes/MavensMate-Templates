@@ -24,7 +24,7 @@ private class {{ api_name }}
      */
 
     @isTest // method1, method2, method3
-    static void aNameThatDescribesTheMethodGroup_Method ()
+    static void aNameThatDescribesTheMethodGroup_MultiMethod ()
     {
         /* ... Method-specific setup ... */
         Test.startTest();
@@ -39,7 +39,7 @@ private class {{ api_name }}
      */
 
     @isTest
-    static void somethingThatDescribesTheProcess_Method ()
+    static void somethingThatDescribesTheProcess_Process ()
     {
         /* ... Method-specific setup ... */
         Test.startTest();
