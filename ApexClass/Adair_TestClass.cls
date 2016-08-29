@@ -9,7 +9,7 @@ private class {{ api_name }}
      */
 
     @isTest // theNameOfTheSubjectMethod
-    static void theNameOfTheSubjectMethod_Method ()
+    static Void theNameOfTheSubjectMethod_Method ()
     {
         /* ... Method-specific setup ... */
         Test.startTest();
@@ -24,7 +24,7 @@ private class {{ api_name }}
      */
 
     @isTest // method1, method2, method3
-    static void aNameThatDescribesTheMethodGroup_MultiMethod ()
+    static Void aNameThatDescribesTheMethodGroup_MultiMethod ()
     {
         /* ... Method-specific setup ... */
         Test.startTest();
@@ -39,7 +39,7 @@ private class {{ api_name }}
      */
 
     @isTest
-    static void somethingThatDescribesTheProcess_Process ()
+    static Void somethingThatDescribesTheProcess_Process ()
     {
         /* ... Method-specific setup ... */
         Test.startTest();
@@ -55,7 +55,7 @@ private class {{ api_name }}
      */
 
     @testSetup
-    static void initialize ()
+    static Void initialize ()
     {}
 
     /**
