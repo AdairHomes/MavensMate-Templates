@@ -72,7 +72,7 @@ public {{ with_or_without_sharing }} class {{ api_name }} extends TriggerHandler
     Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.oldMap;
   }
 
-  public override void undelete () {
+  public override void afterUndelete () {
     {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
     Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
   }
