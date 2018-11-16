@@ -7,15 +7,14 @@
 
 /**
  * Encapsulates all service layer logic for a given function or module in the application
- * 
- * For more guidelines and details see 
+ *
+ * For more guidelines and details see
  *   https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Service_Layer
  *
  **/
 public class {{ api_name }}
 {
-	public static void doSomething()
-	{
+  public static void doSomething () {
 
-	}
+  }
 }

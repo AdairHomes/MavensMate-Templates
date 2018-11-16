@@ -1,12 +1,13 @@
-global class {{ api_name }} {
+global class {{ api_name }}
+{
 
-	webservice String parameter { get; set; }
+  webservice String parameter { get; set; }
 
-	public {{ api_name }}() {
-		this.parameter = 'value';
-	}
+  public {{ api_name }}() {
+    this.parameter = 'value';
+  }
 
-	webservice static String serviceName(){
-		return '';
-	}
+  webservice static String serviceName(){
+    return '';
+  }
 }

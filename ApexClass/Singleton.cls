@@ -1,15 +1,16 @@
-public with sharing class {{ api_name }} {
-    private static {{ api_name }} classInstance;
+public with sharing class {{ api_name }}
+{
+  private static {{ api_name }} classInstance;
 
-    static {
-        classInstance = new {{ api_name }}();
-    }
+  static {
+    classInstance = new {{ api_name }}();
+  }
 
-    private {{ api_name }}() {
-        
-    }
+  private {{ api_name }} () {
 
-    public static {{ api_name }} getInstance() {
-        return classInstance;
-    }
+  }
+
+  public static {{ api_name }} getInstance() {
+    return classInstance;
+  }
 }

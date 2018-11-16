@@ -1,70 +1,96 @@
-public {{ with_or_without_sharing }} class {{ api_name }}
+public {{ with_or_without_sharing }} class {{ api_name }} extends TriggerHandler
 {
 
-    /**
-     *  Initialize / Constructor Method
-     */
-    public {{ api_name }} ()
-    {}
+  /** Cached Records */
+  // @TestVisible
+  // private static CacheObjectExample cachedObjectExample;
+  /** End Cached Records */
 
-    /**
-     *  Before Trigger Methods
-     */
+  static {
+    // cachedObjectExample = new CacheObjectExample();
+  }
 
-    // Before Insert
-    public Void onBeforeInsert (List<{{ sobject_system_name }}> new{{ sobject_camel_case_label }}s)
-    {}
-    // Before Update
-    public Void onBeforeUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map)
-    {}
-    // Before Delete
-    public Void onBeforeDelete (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}sToDelete, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
-    {}
+  /**
+   * Trigger data is available statically as Trigger.new, Trigger.old, Trigger.
+   *    Trigger.newMap, and Trigger.oldMap. However, these values are stored
+   *    as generic SObjects and must be caste to the correct SObject for this
+   *    handler. Examples:
+   *
+   * @example ````apex
+   * @example New {{ sobject_system_name }} List
+   * ````apex
+   * {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+   * ````
+   *
+   * @example New {{ sobject_system_name }} Map
+   * ````apex
+   * Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+   * ````
+   *
+   * @example Old {{ sobject_system_name }} List
+   * ````apex
+   * {{ sobject_system_name }}[] old{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+   * ````
+   *
+   * @example Old {{ sobject_system_name }} Map
+   * ````apex
+   * Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+   * ````
+   */
 
-    /**
-     *  After Trigger Methods
-     */
+  public override void beforeInsert () {
+    {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+    Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+  }
 
-    // After Insert
-    public Void onAfterInsert (List<{{ sobject_system_name }}> new{{ sobject_camel_case_label }}s)
-    {}
-    // After Update
-    public Void onAfterUpdate (List<{{ sobject_system_name }}> old{{ sobject_camel_case_label }}s, List<{{ sobject_system_name }}> updated{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map)
-    {}
-    // After Delete
-    public Void onAfterDelete (List<{{ sobject_system_name }}> deleted{{ sobject_camel_case_label }}s, Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map)
-    {}
+  public override void beforeUpdate () {
+    {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+    Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+    {{ sobject_system_name }}[] old{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.old;
+    Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.oldMap;
+  }
 
-    /**
-     *  Undelete Trigger Method
-     */
+  public override void beforeDelete () {
+    {{ sobject_system_name }}[] old{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.old;
+    Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.oldMap;
+  }
 
-    // Undelete
-    public Void onUndelete (List<{{ sobject_system_name }}> restored{{ sobject_camel_case_label }}s)
-    {}
+  public override void afterInsert () {
+    {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+    Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+  }
 
-    /**
-     *  Asynchronous Trigger Methods
-     */
+  public override void afterUpdate () {
+    {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+    Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+    {{ sobject_system_name }}[] old{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.old;
+    Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.oldMap;
+  }
 
-    // Asynchronous Future Call - After Insert
-    @future public static Void onAfterInsertAsync(Set<Id> new{{ sobject_camel_case_label }}Ids)
-    {}
-    // Asynchronous Future Call - After Update
-    @future public static Void onAfterUpdateAsync (Set<Id> updated{{ sobject_camel_case_label }}Ids)
-    {}
-    // Asynchronous Future Call - After Delete
-    @future public static Void onAfterDeleteAsync (Set<Id> deleted{{ sobject_camel_case_label }}Ids)
-    {}
+  public override void afterDelete () {
+    {{ sobject_system_name }}[] old{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.old;
+    Map<Id, {{ sobject_system_name }}> old{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.oldMap;
+  }
 
-    /**
-     *  Private Methods - This section contains all private methods which should be used by the trigger methods above.
-     *  Trigger code should be contained within these classes rather than directly within the methods above.
-     */
+  public override void undelete () {
+    {{ sobject_system_name }}[] new{{ sobject_camel_case_label }}s = ({{ sobject_system_name }}[]) Trigger.new;
+    Map<Id, {{ sobject_system_name }}> new{{ sobject_camel_case_label }}Map = (Map<Id, {{ sobject_system_name }}>) Trigger.newMap;
+  }
 
-    private Boolean exampleHelperMethod ()
-    {
-        return true;
+
+
+  @TestVisible
+  class CacheObjectExample extends CacheStore
+  {
+    protected override Object fetcher () {
+      return new Lead[] {};
     }
+
+    public Lead[] getAll () {
+      return (Lead[])this.get();
+    }
+  }
+
+  public class {{ api_name }}Exception extends Exception {}
 
 }
